@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_112">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v9.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry exported="true" kind="lib" path="D:/DevOps/jenkins_software/apache-tomcat-8.5.9/lib/servlet-api.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/krishna/gaurav/2.Online Shopping Cart/Online Shopping Cart/lib/classes12.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/krishna/gaurav/2.Online Shopping Cart/Online Shopping Cart/lib/commons-beanutils.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/krishna/gaurav/2.Online Shopping Cart/Online Shopping Cart/lib/commons-collections.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/krishna/gaurav/2.Online Shopping Cart/Online Shopping Cart/lib/commons-digester.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/krishna/gaurav/2.Online Shopping Cart/Online Shopping Cart/lib/commons-fileupload.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/krishna/gaurav/2.Online Shopping Cart/Online Shopping Cart/lib/commons-lang.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/krishna/gaurav/2.Online Shopping Cart/Online Shopping Cart/lib/commons-logging.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/krishna/gaurav/2.Online Shopping Cart/Online Shopping Cart/lib/commons-validator.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/krishna/gaurav/2.Online Shopping Cart/Online Shopping Cart/lib/iText-2.0.7.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/krishna/gaurav/2.Online Shopping Cart/Online Shopping Cart/lib/jakarta-oro.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/krishna/gaurav/2.Online Shopping Cart/Online Shopping Cart/lib/struts.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/krishna/gaurav/2.Online Shopping Cart/Online Shopping Cart/lib/struts-legacy.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
