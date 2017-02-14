@@ -35,20 +35,20 @@ body,td,th {
         <tbody><tr> 
           <td><table border="0" cellpadding="0" cellspacing="0" width="100%">
               <tbody>
-                <td><img src="images_files/medical8.png" width="100%" height="150"></td>
+                <td><img src="images_files/medical8.png" width="100%" height="60"></td>
              
             </tbody></table></td>
         </tr>
         <tr> 
           <td><table border="0" cellpadding="0" cellspacing="0" width="100%">
               <tbody><tr> 
-                <td><img src="images_files/medicine6.jpg" width="100%" height="220"></td>
-                <td><img src="images_files/medicine7.jpg" width="100%" height="220"></td>
+                <td><img src="images_files/medicine6.jpg" width="100%" height="140"></td>
+                <td><img src="images_files/medicine7.jpg" width="100%" height="140"></td>
               </tr>
             </tbody></table></td>
         </tr>
         <tr> 
-          <td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+          <td><table border="1" cellpadding="0" cellspacing="0" width="100%">
               <tbody><tr> 
                
                 <td background="images_files/med2.jpg">
@@ -57,85 +57,15 @@ body,td,th {
               </tr>
             </tbody></table></td>
         </tr>
-        <tr> 
+        <tr background="images_files/med2.jpg"> 
           <td><table border="0" cellpadding="0" cellspacing="0" width="100%">
-              <tbody><tr> 
+              <tbody> 
                 <td valign="top" width="192"><table border="0" cellpadding="0" cellspacing="0" width="100%">
-                    <tbody><tr> 
-                      <td><img src="images_files/med2.jpg" width="100%" height="17"></td>
-                    </tr>
-                    <tr> 
-                      <td background="images_files/med2.jpg"><table border="0" cellpadding="0" cellspacing="0" width="100%">
-                          <tbody><tr> 
-                            <td class="links" style="padding-left: 15px;" height="28"></td>
-                          </tr>
-                          <tr> 
-                            <td class="links" style="padding-left: 15px;" height="28"></td>
-                          </tr>
-                          <tr> 
-                            <td class="links" style="padding-left: 15px;" height="28"></td>
-                          </tr>
-                          <tr> 
-                            <td class="links" style="padding-left: 15px;" height="28"></td>
-                          </tr>
-						  <tr> 
-                            <td class="links" style="padding-left: 15px;" height="28"> 
-                             </td>
-                          </tr>
-                          <tr> 
-                            <td class="links" style="padding-left: 15px;" height="28"></td>
-                          </tr>
-                          <tr> 
-                            <td class="links" style="padding-left: 15px;" height="28"></td>
-                          </tr>
-                          <tr> 
-                            <td class="links" style="padding-left: 15px;" height="28"></td>
-                          </tr>
-                          <tr> 
-                            <td class="links" style="padding-left: 15px;" height="28">&nbsp;</td>
-                          </tr>
-						  <tr> 
-                            <td class="links" style="padding-left: 15px;" height="28"></td>
-                          </tr>
-						  <tr> 
-                            <td class="links" style="padding-left: 15px;" height="28"></td>
-                          </tr>
-                          
-                          <tr> 
-                            <td class="links" style="padding-left: 15px;" height="28"></td>
-                          </tr>
-                         
-                          
-						  
-                          <tr> 
-                            <td class="links" style="padding-left: 15px;" height="28"></td>
-                          </tr>
-                          <tr> 
-                            <td class="links" style="padding-left: 15px;" height="28"> </td>
-                          </tr>
-                          <tr> 
-                            <td class="links" style="padding-left: 15px;" height="28"><div align="center"><br>
-                                <br>
-                                <br>
-                                <a href="http://www.naemd.com/naemdprospects.pdf"></a></div>
-                              <br></td>
-                          </tr>
-                          <tr> 
-                            <td class="links" style="padding-left: 10px;" height="28"><div align="center"><a href="http://www.niemindia.com/" target="_blank"></a></div></td>
-                          </tr>
-                          <tr> 
-                            <td height="213">&nbsp;</td>
-                          </tr>
-                        </tbody></table></td>
-                    </tr>
-                    <tr> 
-                      <td><img src="images_files/med2.jpg" width="100%" height="17"></td>
-                    </tr>
-                  </tbody></table></td>
-                <td valign="top" width="604"> 
-                 <marquee><H1><font color="green">Online Stores </font></H1></marquee>  <p align="center">&nbsp;</p>
-               
-
+                    
+                  </table></td>
+                <td valign="top"  width="750" > 
+                 <H1 align="center"><font color="Blue">Medical Store System </font></H1>  <p align="center">&nbsp;</p>
+             
                   <p align="center"> <fieldset>
 					<legend><span class="style3">View Query Status</span></legend>
                     <br />
@@ -214,63 +144,18 @@ body,td,th {
   </form>
 					</fieldset>
 				 </td>
-                <p align="center">&nbsp;</p></td>
-                <td valign="top" width="194"><table border="0" cellpadding="0" cellspacing="0" width="100%">
-                    <tbody><tr> 
-                      <td><img src="images_files/med2.jpg" width="100%" height="15"></td>
-                    </tr>
-                    <tr> 
-                      <td background="images_files/med2.jpg"><table border="0" cellpadding="0" cellspacing="0" width="100%">
-                          <tbody>
-                         <tr> 
-                            <td align="center" valign="top" width="194" height="450"><marquee direction="up" align="middle" width="106" height="450">
-                              <img src="images_files/medicin1.jpg" width="100%" height="160"><img src="images_files/medicine3.jpg" width="106" height="160"><img src="images_files/medicine5.jpg" width="106" height="160"><img src="images_files/medicine4.jpg" width="106" height="160"><img src="images_files/medicine7.jpg" width="106" height="160"><img src="images_files/medical9.jpg" width="106" height="160"><img src="images_files/medical8.png" width="106" height="160"></td> 
+               <p align="center">&nbsp;</p></td>
+                <td valign="top" width="194">
+               
+                    
+                      <marquee direction="up" align="left" width="100%" height="640">
+                              <img src="images_files/medicin1.jpg" width="100%" height="160"><img src="images_files/medicine3.jpg" width="100%" height="160"><img src="images_files/medicine5.jpg" width="100%" height="160"><img src="images_files/medicine4.jpg" width="100%" height="160"><img src="images_files/medicine7.jpg" width="100%" height="160"><img src="images_files/medical9.jpg" width="100%" height="160"><img src="images_files/medical8.png" width="100%" height="160"></td> 
                               </marquee>
+                         
                           </tr>
-                          <tr> 
-                            <td>&nbsp;</td>
-                          </tr>
-                 		<tr> 
-                            <td>&nbsp;</td>
-                          </tr>
-                          <tr> 
-                            <td>&nbsp;</td>
-                          </tr>
-                          <tr> 
-                            <td>&nbsp;</td>
-                          </tr>
-                          <tr> 
-                            <td>&nbsp;</td>
-                          </tr>
-                          <tr> 
-                            <td>&nbsp;</td>
-                          </tr>
-                          <tr> 
-                            <td>&nbsp;</td>
-                          </tr>
-                          <tr> 
-                            <td>&nbsp;</td>
-                          </tr>
-                          <tr> 
-                            <td>&nbsp;</td>
-                          </tr>
-                          <tr> 
-                            <td>&nbsp;</td>
-                          </tr>
-                          <tr> 
-                            <td>&nbsp;</td>
-                          </tr>
-                          <tr> 
-                            <td>&nbsp;</td>
-                          </tr>
-                          <tr> 
-                            <td>&nbsp;</td>
-                          </tr>
-                        </tbody></table></td>
+                       </td>
                     </tr>
-                    <tr> 
-                      <td><img src="images_files/med2.jpg" width="100%" height="17"></td>
-                    </tr>
+                    
                   </tbody></table></td>
               </tr>
 			  

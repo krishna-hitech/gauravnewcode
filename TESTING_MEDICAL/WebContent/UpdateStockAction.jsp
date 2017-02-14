@@ -23,7 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
      <%
-     String target="ViewStockbyBrand.jsp?header=list";
+     String target="ViewStockbyCompany.jsp?header=list";
       try{
             StockDAO aStockdao = new StockDAO();
             String bci = "";

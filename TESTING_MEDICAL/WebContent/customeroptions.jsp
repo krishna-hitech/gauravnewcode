@@ -11,9 +11,9 @@ System.out.println("hello"+session.getAttribute("user"));
 function mmLoadMenus() {
   if (window.mm_menu_1224101012_0) return;
 window.mm_menu_1224101012_0 = new Menu("root",150,25,"Georgia, Times New Roman, Times, serif",12,"#993333","#333366","#B6B6B6","#E7D398","left","middle",3,0,500,-5,7,true,false,true,0,true,false);
-   // mm_menu_1224101012_0.addMenuItem("Brands","location='userViewBrands.jsp?header=view'");
+   mm_menu_1224101012_0.addMenuItem("Company","location='userViewCompany.jsp?header=view'");
    mm_menu_1224101012_0.addMenuItem("Category","location='userViewCategories.do?header=view'");
-   mm_menu_1224101012_0.addMenuItem("Items","location='viewCustomerItems.do?header=view'");
+   mm_menu_1224101012_0.addMenuItem("Medicine","location='viewCustomerMedicine.do?header=view'");
    mm_menu_1224101012_0.fontWeight="bold";
    mm_menu_1224101012_0.hideOnMouseOut=true;
    mm_menu_1224101012_0.bgColor='#DCF8C0';
@@ -29,7 +29,7 @@ window.mm_menu_1224101649_0 = new Menu("root",150,25,"Georgia, Times New Roman, 
    mm_menu_1224101649_0.menuBorder=3;
    mm_menu_1224101649_0.menuLiteBgColor='#DCF8C0';
    mm_menu_1224101649_0.menuBorderBgColor='#FFFFFF';
-window.mm_menu_1224101802_0 = new Menu("root",150,25,"Georgia, Times New Roman, Times, serif",12,"#993333","#333366","#B6B6B6","#E7D398","left","middle",3,0,500,-5,7,true,false,true,0,true,false);
+/*window.mm_menu_1224101802_0 = new Menu("root",150,25,"Georgia, Times New Roman, Times, serif",12,"#993333","#333366","#B6B6B6","#E7D398","left","middle",3,0,500,-5,7,true,false,true,0,true,false);
    mm_menu_1224101802_0.addMenuItem("View All Dealers","location='ViewDealers.jsp?header=list'");
    mm_menu_1224101802_0.addMenuItem("View Dealers By Area","location='ViewDealersbyArea.jsp?header=list'");
    mm_menu_1224101802_0.addMenuItem("View Active Dealers","location='ViewActiveDealers.jsp?header=list'");
@@ -40,10 +40,10 @@ window.mm_menu_1224101802_0 = new Menu("root",150,25,"Georgia, Times New Roman, 
    mm_menu_1224101802_0.menuBorder=3;
    mm_menu_1224101802_0.menuLiteBgColor='#DCF8C0';
    mm_menu_1224101802_0.menuBorderBgColor='#FFFFFF';
-   
+ */  
 window.mm_menu_1224101903_0 = new Menu("root",150,25,"Georgia, Times New Roman, Times, serif",12,"#993333","#333366","#B6B6B6","#E7D398","left","middle",3,0,500,-5,7,true,false,true,0,true,false);
-   mm_menu_1224101903_0.addMenuItem("View UserOrders","location='viewCustomerOrders.do'");
-   mm_menu_1224101903_0.addMenuItem("View Orders by Date","location='ViewOrdersByDate.jsp'");
+   //mm_menu_1224101903_0.addMenuItem("View UserOrders","location='viewCustomerSales.do'");
+   //mm_menu_1224101903_0.addMenuItem("View Orders by Date","location='ViewSalesByDate.jsp'");
    mm_menu_1224101903_0.fontWeight="bold";
    mm_menu_1224101903_0.hideOnMouseOut=true;
    mm_menu_1224101903_0.bgColor='#DCF8C0';
@@ -95,7 +95,7 @@ a:active {
 <a href="#" name="link45" id="link45" onMouseOver="MM_showMenu(window.mm_menu_1224101649_0,0,25,null,'link45')" onMouseOut="MM_startTimeout();" >Queries&nbsp;||&nbsp;</a></td><td>
 <a href="UserSearch.jsp" >Search&nbsp;||&nbsp;</a></td><td>
 <a href="ViewCart.jsp"> View Cart&nbsp;||&nbsp;</a></td><td>
-<a href="#" name="link4" id="link4" onMouseOver="MM_showMenu(window.mm_menu_1224101903_0,0,25,null,'link4')" onMouseOut="MM_startTimeout();">Orders&nbsp;||&nbsp;</a></td><td>
+<a href="viewCustomerSales.do" >Orders&nbsp;||&nbsp;</a></td><td>
 <a href="#" name="link8" id="link8" onMouseOver="MM_showMenu(window.mm_menu_1224122939_0,0,25,null,'link8')" onMouseOut="MM_startTimeout();">Security&nbsp;||&nbsp;</a></td><td>
 <a href="LogoutAction.jsp" >Logout&nbsp;||&nbsp;</a></td></tr></table>
 </body>

@@ -1,11 +1,12 @@
 
-<%@ page import="com.dts.crsm.model.*,com.dts.crsm.dao.*,com.dts.core.util.*,java.util.*"%>
+<%@ page import="com.dts.crsm.model.Medicine,com.dts.crsm.dao.MedicineDAO,com.dts.core.util.CoreHash,com.dts.core.util.LoggerManager,java.util.*"%>
+<%@  page import="com.dts.crsm.model.Category, com.dts.crsm.dao.CategoryDAO,com.dts.core.util.CoreList"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head>
 <%--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">--%>
 
 
-<title> Online Shopping Mall </title>
+<title> Medical Store System  </title>
 <%--<meta name="Description" content="Event Management Institute India, Event Management Courses In India, | national academy of event management and development ">
 <meta name="KeyWords" content="Event Management Institute, Event Managemnet Course, Event Management Courses in India - Asia, Event Management Program, Jobs in Events, Career in Events, Event Management College, certified course in events, International event management course.">
 
@@ -78,70 +79,69 @@ function validate()
                  <H1 align="center"><font color="Blue">Medical Store System </font></H1>  <p align="center">&nbsp;</p>
                
 
-
                   <p align="center"><fieldset>
-					<legend class="style1">Solution</legend>
-					<br/>
-					<form id="form1" method="post" action="ReplySolution.jsp">
-					
-					<%
-					      int queryid = Integer.parseInt(request.getParameter("id"));
-					      CoreHash aCoreHash = new CoreHash();
-	     				  try{
-            				 
-             				Query aQuery = new QueryDAO().getSolution(queryid);  
-            				  
-         					 
-					 %>
-					  <table width="381" border="0" align="center">
-                        <tr>
-                          <td width="85"><span class="style1">From</span></td>
-              <td width="286"><label>
-                            <input name="from" type="text" id="textfield" size="48" value="<%=aQuery.getCustomerID()%>" readonly />
-                          </label></td>
-                        </tr>
-                        <tr>
-                          <td><span class="style1">To</span></td>
-                          <td><label>
-                            <input name="to" type="text" id="textfield2" size="48"  value="Administrator" readonly/>
-                          </label></td>
-                        </tr>
-                        <tr>
-                          <td><span class="style1">Query</span></td>
-                          <td><label>
-                            <textarea name="query" id="textarea" cols="45" rows="5" readonly="readonly"><%=aQuery.getDescription() %></textarea>
-                          </label></td>
-                        </tr>
-                        <tr>
-                          <td><span class="style1">Send Date</span></td>
-                          <td><input type="text" name="query2" id="query" readonly value="<%=DateWrapper.parseDate(aQuery.getQueryDate1())%>"/></td>
-                        </tr>
-                        <tr>
-                          <td><span class="style1">Reply Date</span></td>
-                          <td><input name="textfield" type="text" id="textfield3" size="48" readonly="readonly" value="<%=DateWrapper.parseDate(aQuery.getSolutionDate1())%>"/></td>
-                        </tr>
-                        <tr>
-                          <td><span class="style1">Solution</span></td>
-                          <td><textarea name="query2" id="query" cols="45" rows="5" readonly><%=aQuery.getSolution()%></textarea></td>
-                        </tr>
-                        <tr>
-                          <td colspan="2"><label>
-                            <div align="center">
-                              <input type="button" name="button" id="button" value="back" onclick="javascript:history.back(-1)"/>
-                              </div>
-                          </label></td>
-                        </tr>
-                      </table>
-                      <%}
-                      catch(Exception e)
-                      {
-                         LoggerManager.writeLogWarning(e);
-                      } %>
-                      </form>
-					<br/>
-                    
-					  </fieldset></td>
-               <p align="center">&nbsp;</p></td>
+					<legend><span class="style3">View Medicine</span></legend>
+  <br />
+                    <form name="f" method="post" action="DeleteMedicineAction.jsp">
+ 
+    <table width="637" border="0" align="center" bordercolor="#8692E3">
+    
+      <tr bgcolor="#509C16">
+      <%
+         String header = request.getParameter("header");
+	     String role = (String) session.getAttribute("role");
+	      CoreList aCoreList = new CoreList();
+	      CoreHash cCoreHash = new CoreHash();
+	     try{
+             int categoryid = 0;
+             int medicineid = 0;
+             MedicineDAO medicinedao = new MedicineDAO();
+             CategoryDAO categorydao = new CategoryDAO();
+             aCoreList = (CoreList)request.getAttribute("CoreList");
+             cCoreHash = (CoreHash)request.getAttribute("CoreHash");  
+             if(!aCoreList.isEmpty())
+         	{
+        
+        %>
+        <td width="219"><div align="center" class="style8">Category</div></td>
+        <td width="219"><div align="center" class="style8">Medicine Name</div></td>
+        <td width="386"><div align="center" class="style8">Description</div></td>
+      </tr>
+          <%
+          	Enumeration enu = aCoreList.elements();
+          Medicine medicine;
+          			while (enu.hasMoreElements()) {
+          				medicine = (Medicine) enu.nextElement();
+          				medicineid = medicine.getMedicineID();
+          				categoryid = medicine.getCategoryID();
+          				
+          %>
+      <tr bgcolor="#CEC9FA">
+      
+        <td bgcolor="#C3D7BA"><div align="center" class="style7"><%=cCoreHash.get(new Integer(categoryid))%></div></td> 
+        <td bgcolor="#C3D7BA"><div align="center" class="style7">
+        <%=medicine.getMedicineName()%>
+        </div></td>
+        <td bgcolor="#C3D7BA"><div align="center"><span class="style7"><%=medicine.getMedicineDesc()%></span></div></td>
+      </tr>
+      <%
+      	}
+      		} else {
+      %>
+         <tr><td height="24" colspan="4"><div align="center" class="style3"><strong>No Records Found</strong></div></td>
+         </tr>
+      <%
+      	}
+      	} catch (Exception e) {
+      		LoggerManager.writeLogWarning(e);
+      	}
+      	
+       %>
+    </table>
+  </form>
+					</fieldset>
+				</td>
+                      <p align="center">&nbsp;</p></td>
                 <td valign="top" width="194">
                
                     

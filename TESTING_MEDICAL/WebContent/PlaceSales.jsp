@@ -11,7 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'PlaceOrder.jsp' starting page</title>
+    <title>My JSP 'PlaceSales.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -37,7 +37,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
          String quantity[] = request.getParameterValues("quantity");
          String price[] = request.getParameterValues("price");
          
-         Sales singleSales = null;
+         Sales singleSales ;
          Sales totalSales = new Sales();
          CoreHash aCoreHash = new CoreHash();
          System.out.println("This is Application--1  "+categoryid.length);
@@ -45,7 +45,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
          {
          	for(int i=1; i<categoryid.length;i++)
          	{
-            	singleSales = new Sales();
+         		singleSales = new Sales();
             
            		// singleOrders.setBrandid(Integer.parseInt(brandid[i]));
             	singleSales.setCategoryid(Integer.parseInt(categoryid[i]));
@@ -56,7 +56,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             	System.out.println("quantity"+quantity[i]);
             	singleSales.setPrice(Float.parseFloat(price[i]));
             	System.out.println("price"+price[i]);
-            System.out.println("This is Application alfjasfljsl adsjflkas--- categoryid"+categoryid[i]+"Medicineid"+medicineid[i]+"quantityid"+quantity[i]);	
+            System.out.println("This is Application --- categoryid"+categoryid[i]+"Medicineid"+medicineid[i]+"quantityid"+quantity[i]);	
           	    aCoreHash.put(new Integer(i),singleSales);
          	}
          }
@@ -68,7 +68,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
          
          double total = Double.parseDouble(request.getParameter("total"));
          
-         System.out.println("This is asdf alkdfjlas sdla alsflasj---2");
+         System.out.println("This is Application---2");
          
          totalSales.setTotalamount(total);
          totalSales.setLoginname((String)session.getAttribute("user"));

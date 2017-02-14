@@ -155,18 +155,18 @@ public class StockDAO extends AbstractDataAccessObject{
     	}
     	return flag;
     }
-// Update Stock by orderid
+// Update Stock by salesid
 	
-    public boolean updateStock(int orderid)
+    public boolean updateStock(int salesid)
     {
     	boolean flag = false;
     	try
     	{
     		con=getConnection();
     		con.setAutoCommit(false);
-    		PreparedStatement pst1 = con.prepareStatement("select  categoryid, medicineid, quantity from medicineorder where orderid=?");
+    		PreparedStatement pst1 = con.prepareStatement("select  categoryid, medicineid, quantity from medicinesales where salesid=?");
     		PreparedStatement pst = con.prepareStatement("update STOCK set quantity=(quantity+?) where   categoryid=? and medicineid=?");
-    		pst1.setInt(1, orderid);
+    		pst1.setInt(1, salesid);
     		
     		ResultSet rs = pst1.executeQuery();
     		while(rs.next())

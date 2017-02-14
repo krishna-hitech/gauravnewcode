@@ -99,10 +99,10 @@
       </action>
   <action path="/viewQueries" type="org.apache.struts.actions.ForwardAction" parameter="/ViewQueries.jsp"/>
     <action
-      path="/customerOrders"
+      path="/customerSales"
       type="com.dts.project.action.CustomerSales"
       validate="false">
-       <forward name="ViewCustomerOrders" path="/UpdateCustomerOrder.jsp"/>
+       <forward name="ViewCustomerSales" path="/UpdateCustomerSales.jsp"/>
    <forward name="norecords" path="/Success.jsp?status=No Records Found"/>
    
       </action>
@@ -132,11 +132,11 @@
       </action>
       
        <action
-      path="/viewCustomerItems"
+      path="/viewCustomerMedicine"
       type="com.dts.project.action.CustomerViewMedicine"
       validate="false">
     
-    <forward name="ViewMedicine" path="/CustomerViewItems.jsp"/>
+    <forward name="ViewMedicine" path="/CustomerViewMedicine.jsp"/>
       
       </action>
       <action path="/queries" type="org.apache.struts.actions.ForwardAction" parameter="/Queries.jsp"/>
@@ -167,8 +167,8 @@
    <forward name="norecords" path="/Success.jsp?status=No Records Found"/>
    
       </action>
-    <action path="/viewCustomerOrders" type="com.dts.project.action.ViewCustomerSalesAction" validate="false">
-       <forward name="viewCustomerOrders" path="/ViewCustomerOrder.jsp"/>
+    <action path="/viewCustomerSales" type="com.dts.project.action.ViewCustomerSalesAction" validate="false">
+       <forward name="viewCustomerSales" path="/ViewCustomerSales.jsp"/>
    <forward name="norecords" path="/Success.jsp?status=No Records Found"/>
    
       </action>

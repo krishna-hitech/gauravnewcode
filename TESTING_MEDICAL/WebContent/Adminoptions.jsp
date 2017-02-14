@@ -10,7 +10,7 @@ System.out.println("hello"+session.getAttribute("user"));
 function mmLoadMenus() {
   if (window.mm_menu_1224101012_0) return;
       window.mm_menu_1224101012_0 = new Menu("root",134,25,"Georgia, Times New Roman, Times, serif",12,"#993333","#333366","#B6B6B6","#E7D398","left","middle",3,0,500,-5,7,true,false,true,0,true,false);
-  // mm_menu_1224101012_0.addMenuItem("Company","location='ViewCompany.jsp?header=list'");
+  mm_menu_1224101012_0.addMenuItem("Company","location='ViewCompany.jsp?header=list'");
   mm_menu_1224101012_0.addMenuItem("Category","location='ViewCategories.do?header=list'");
   mm_menu_1224101012_0.addMenuItem("Medicine","location='viewMedicine.do?header=list'");
    mm_menu_1224101012_0.fontWeight="bold";
@@ -20,30 +20,30 @@ function mmLoadMenus() {
    mm_menu_1224101012_0.menuLiteBgColor='#DCF8C0';
    mm_menu_1224101012_0.menuBorderBgColor='';
 window.mm_menu_1224101649_0 = new Menu("root",134,25,"Georgia, Times New Roman, Times, serif",12,"#993333","#333366","#B6B6B6","#E7D398","left","middle",3,0,500,-5,7,true,false,true,0,true,false);
-  // mm_menu_1224101649_0.addMenuItem("View by Company","location='ViewStockbyCompany.jsp?header=list'");
+   mm_menu_1224101649_0.addMenuItem("View by Company","location='ViewStockbyCompany.jsp?header=list'");
   mm_menu_1224101649_0.addMenuItem("View by Category","location='viewStockbyCategory.do'"); 
-  // mm_menu_1224101649_0.addMenuItem("View by Medicine","location='ViewStockbyMedicine.jsp?header=list'"); 
+   mm_menu_1224101649_0.addMenuItem("View by Medicine","location='ViewStockbyMedicine.jsp?header=list'"); 
    mm_menu_1224101649_0.fontWeight="bold";
    mm_menu_1224101649_0.hideOnMouseOut=true;
    mm_menu_1224101649_0.bgColor='#DCF8C0';
    mm_menu_1224101649_0.menuBorder=3;
    mm_menu_1224101649_0.menuLiteBgColor='#DCF8C0';
    mm_menu_1224101649_0.menuBorderBgColor='#FFFFFF';
-  window.mm_menu_1224101802_0 = new Menu("root",150,25,"Georgia, Times New Roman, Times, serif",12,"#993333","#333366","#B6B6B6","#E7D398","left","middle",3,0,500,-5,7,true,false,true,0,true,false);
+ /* window.mm_menu_1224101802_0 = new Menu("root",150,25,"Georgia, Times New Roman, Times, serif",12,"#993333","#333366","#B6B6B6","#E7D398","left","middle",3,0,500,-5,7,true,false,true,0,true,false);
   mm_menu_1224101802_0.addMenuItem("Register Employee","location='EmployeeForm.jsp'");
   mm_menu_1224101802_0.addMenuItem("View Employees","location='ViewDealersbyArea.jsp'");
-  // mm_menu_1224101802_0.addMenuItem("View Active Dealers","location='ViewActiveDealers.jsp?header=list'");
-  // mm_menu_1224101802_0.addMenuItem("View Inactive Dealers","location='ViewInActiveDealers.jsp?header=list'");
+   mm_menu_1224101802_0.addMenuItem("View Active Dealers","location='ViewActiveDealers.jsp?header=list'");
+   mm_menu_1224101802_0.addMenuItem("View Inactive Dealers","location='ViewInActiveDealers.jsp?header=list'");
    mm_menu_1224101802_0.fontWeight="bold";
    mm_menu_1224101802_0.hideOnMouseOut=true;
    mm_menu_1224101802_0.bgColor='#DCF8C0';
    mm_menu_1224101802_0.menuBorder=3;
    mm_menu_1224101802_0.menuLiteBgColor='#DCF8C0';
    mm_menu_1224101802_0.menuBorderBgColor='#FFFFFF';
-   
+  */ 
    window.mm_menu_1224101903_0 = new Menu("root",134,25,"Georgia, Times New Roman, Times, serif",12,"#993333","#333366","#B6B6B6","#E7D398","left","middle",3,0,500,-5,7,true,false,true,0,true,false);
  // mm_menu_1224101903_0.addMenuItem("View Dealer Orders","location='UpdateDealerOrder.jsp'");
-  mm_menu_1224101903_0.addMenuItem("View Customer Orders","location='customerOrders.do'");
+  //mm_menu_1224101903_0.addMenuItem("View Customer Orders","location='customerSales.do'");
    mm_menu_1224101903_0.fontWeight="bold";
    mm_menu_1224101903_0.hideOnMouseOut=true;
    mm_menu_1224101903_0.bgColor='#DCF8C0';
@@ -91,10 +91,8 @@ a:active {
 
 <table><tr><td><a href="adminhome.do" >Home&nbsp;||&nbsp;</a></td><td>
 <a href="#" name="link7" id="link1" onMouseOver="MM_showMenu(window.mm_menu_1224101012_0,0,25,null,'link7')" onMouseOut="MM_startTimeout();" >Medicine&nbsp;||&nbsp;</a></td><td>
-<a href="#" name="link6" id="link2" onMouseOver="MM_showMenu(window.mm_menu_1224101649_0,0,25,null,'link6')" onMouseOut="MM_startTimeout();" >Stock&nbsp;||&nbsp;</a></td><td>
-<a href="#" name="link5" id="link3" onMouseOver="MM_showMenu(window.mm_menu_1224101802_0,0,25,null,'link5')" onMouseOut="MM_startTimeout();">Employees&nbsp;||&nbsp;</a></td><td>
-<a href="viewQueries.do" >Queries&nbsp;||&nbsp;</a></td><td>
-<a href="#" name="link4" id="link4" onMouseOver="MM_showMenu(window.mm_menu_1224101903_0,0,25,null,'link4')" onMouseOut="MM_startTimeout();">Sales&nbsp;||&nbsp;</a></td><td>
+<a href="#" name="link6" id="link2" onMouseOver="MM_showMenu(window.mm_menu_1224101649_0,0,25,null,'link6')" onMouseOut="MM_startTimeout();" >Stock&nbsp;||&nbsp;</a></td><td><a href="viewQueries.do" >Queries&nbsp;||&nbsp;</a></td><td>
+<a href="customerSales.do" >Sales&nbsp;||&nbsp;</a></td><td>
 <a href="#" name="link8" id="link8" onMouseOver="MM_showMenu(window.mm_menu_1224122939_0,0,25,null,'link8')" onMouseOut="MM_startTimeout();">Security&nbsp;||&nbsp;</a></td><td>
 <a href="LogoutAction.jsp" >Logout</a></td></tr></table>
 </body>

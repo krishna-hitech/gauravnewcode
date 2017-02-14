@@ -69,7 +69,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       else
          status = "Medicine already added to cart";   
          
-      response.sendRedirect("UserSearch.jsp?categoryid="+categoryid+"&itemid=0&status="+status);
+      response.sendRedirect("UserSearch.jsp?categoryid="+categoryid+"&medicineid=0&status="+status);
       %>
   </body>
 </html>

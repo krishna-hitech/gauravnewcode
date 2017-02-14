@@ -33,7 +33,7 @@
 <div id="wrapper">
   <div id="col-two1">
 	  <div class="boxed">
-		<h2 class="title">Welcome to CSM</h2>
+		<h2 class="title">Welcome to Medical Store System</h2>
       
 			<h3 align="right">
 	    <a align="right"><script language="JavaScript" type="text/javascript">

@@ -28,9 +28,9 @@ public class MedicineDAO extends AbstractDataAccessObject{
     	try
     	{
     		con=getConnection();
-    		int id = getSequenceID("MEDICINE","medicineid");
+    		int medicineid = getSequenceID("MEDICINE","medicineid");
     		PreparedStatement pst = con.prepareStatement("insert into MEDICINE values(?,?,?,?)");
-    		pst.setInt(1, id);
+    		pst.setInt(1, medicineid);
     		pst.setInt(2, medicine.getCategoryID());
     		pst.setString(3, medicine.getMedicineName());
     		pst.setString(4, medicine.getMedicineDesc());
@@ -68,14 +68,14 @@ public class MedicineDAO extends AbstractDataAccessObject{
     	try
     	{
     		con=getConnection();
-    		int id = medicine.getMedicineID();
+    		int medicineid = medicine.getMedicineID();
     		
     		PreparedStatement pst = con.prepareStatement("update Medicine set categoryid=?,medicinename=?,medicinedesc=? where medicineid=?");
     		
     		pst.setInt(1, medicine.getCategoryID());    		
     		pst.setString(2, medicine.getMedicineName());
     		pst.setString(3, medicine.getMedicineDesc());
-    		pst.setInt(4, id);
+    		pst.setInt(4, medicineid);
     		
     		if(pst.executeUpdate()>0)
     			flag = true;
@@ -144,7 +144,7 @@ public class MedicineDAO extends AbstractDataAccessObject{
 		{
 			con = getConnection();
 			st = con.createStatement();
-			ResultSet rs = st.executeQuery("select i.MEDICINEID,i.CATEGORYID,i.MEDICINENAME,i.MEDICINEDESC,c.CATEGORYNAME from MEDICINE i,CATEGORY c where i.CATEGORYID=c.ID order by i.MEDICINEID");
+			ResultSet rs = st.executeQuery("select i.MEDICINEID,i.CATEGORYID,i.MEDICINENAME,i.MEDICINEDESC,c.CATEGORYNAME from MEDICINE i,CATEGORY c where c.CATEGORYID=i.MEDICINEID order by i.MEDICINEID");
 			while(rs.next())
 			{
 				medicineid = rs.getInt(1);
@@ -227,7 +227,7 @@ public class MedicineDAO extends AbstractDataAccessObject{
 		{
 			con = getConnection();
 			st = con.createStatement();
-			ResultSet rs = st.executeQuery("select * from medicine where medicineid="+medicineid);
+			ResultSet rs = st.executeQuery("select * from medicine where medicineid="+ medicineid);
 			if(rs.next())
 			{
 				medicineid = rs.getInt(1);
@@ -256,7 +256,7 @@ public class MedicineDAO extends AbstractDataAccessObject{
 		return medicine;
 	}
     
-//list Items by category
+//list Medicine by category
     
     public CoreHash listMedicineByCategory(int categoryid)
 	{
@@ -298,4 +298,50 @@ public class MedicineDAO extends AbstractDataAccessObject{
 		}
 		return aCoreHash;
 	}
+
+
+// list medicine by company
+
+public CoreHash listMedicineByCompany(int companyid)
+{
+	CoreHash aCoreHash = new CoreHash();
+	aCoreHash.clear();
+	int medicineid;
+	Statement st;
+	try 
+	{
+		con = getConnection();
+		st = con.createStatement();
+		ResultSet rs = st.executeQuery("select * from MEDICINE where companyid="+companyid);
+		while(rs.next())
+		{
+			medicineid = rs.getInt(1);
+			medicine = new Medicine();
+			medicine.setMedicineID(medicineid);
+			medicine.setCategoryID(rs.getInt(2));
+			medicine.setMedicineName(rs.getString(3));
+			medicine.setMedicineDesc(rs.getString(4));
+
+			aCoreHash.put(new Integer(companyid), medicine);
+		}
+	} 
+	catch (SQLException e)
+	{
+		LoggerManager.writeLogWarning(e);
+	}
+	finally
+	{
+		try
+		{
+		  con.close();
+		}
+		catch(Exception e)
+		{
+			LoggerManager.writeLogWarning(e);
+		}
+	}
+	return aCoreHash;
 }
+}
+
+

@@ -39,7 +39,7 @@ public class SalesDAO extends AbstractDataAccessObject{
 			String salesdate = sales.getSalesDate();
 			String status = sales.getStatus();
 			
-			PreparedStatement pst = con.prepareStatement("insert into TOTALSALES(SOLD,LoginName,SaleDate,TotalAmount,status) values(?,?,?,?,?)");
+			PreparedStatement pst = con.prepareStatement("insert into TOTALSALES(SOLD,LoginName,SalesDate,TotalAmount,status) values(?,?,?,?,?)");
 			
 			pst.setString(2, loginname);
 			pst.setInt(1, salesid);
@@ -306,7 +306,7 @@ public class SalesDAO extends AbstractDataAccessObject{
 		return aCoreHash;
 	}
 	
-	//List Sales Items
+	//List Sales Medicine
 	public CoreHash listSalesDetails(int salesid)
 	{
 		CoreHash aCoreHash = new CoreHash();
@@ -314,7 +314,7 @@ public class SalesDAO extends AbstractDataAccessObject{
 		try
 		{
 		   Statement st = con.createStatement();
-		   ResultSet rs = st.executeQuery("select * from MEDICINESALES where Salesid="+salesid);
+		   ResultSet rs = st.executeQuery("select * from MEDICINESALES where salesid="+salesid);
 		   int i=0;
 		   while(rs.next())
 		   {

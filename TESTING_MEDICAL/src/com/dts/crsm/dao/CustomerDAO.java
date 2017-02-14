@@ -25,7 +25,7 @@ public class CustomerDAO extends AbstractDataAccessObject{
 			String loginname = "";
 			con = getConnection();
 			Statement st = con.createStatement();
-			ResultSet rs = st.executeQuery("select ld.loginname,ld.firstname,ld.lastname,lp.city,lp.ContactNo,lp.birthdate,lp.hno,lp.street,lp.state,lp.country,lp.pincode,lp.email,ld.loginstatus from logindetails ld,loginprofile lp where ld.loginname=lp.loginid and ld.logintype='customer'");
+			ResultSet rs = st.executeQuery("select ld.loginname,ld.firstname,ld.lastname,lp.city,lp.ContactNo,lp.dob,lp.hno,lp.street,lp.state,lp.country,lp.pin,lp.email,ld.loginstatus from logindetails ld,loginprofile lp where ld.loginname=lp.loginname and ld.logintype='customer'");
 			while(rs.next())
 			{
 				  loginname = rs.getString(1);
