@@ -38,20 +38,12 @@ body,td,th {
 </head>
 <body leftmargin="0" topmargin="0" onLoad="Delay()" marginheight="0" marginwidth="0">
 <table style="border: 1px solid rgb(0, 0, 102);" align="center" bgcolor="#A8B7B6" border="0" cellpadding="0" cellspacing="0" width="100%">
-  <tbody><tr>
-    <td><table border="0" cellpadding="0" cellspacing="0" width="100%">
-        <tbody><tr> 
-          <td><table border="0" cellpadding="0" cellspacing="0" width="100%">
-              <tbody>
-                <td><img src="images_files/medical8.png" width="100%" height="60"></td>
-             
-            </tbody></table></td>
-        </tr>
+  <tbody>
         <tr> 
           <td><table border="0" cellpadding="0" cellspacing="0" width="100%">
               <tbody><tr> 
-                <td><img src="images_files/medicine6.jpg" width="100%" height="140"></td>
-                <td><img src="images_files/medicine7.jpg" width="100%" height="140"></td>
+                <td><img src="images_files/blog_banner_01 (1).jpg" width="100%" height="130"></td>
+                <td><img src="images_files/images (2).jpg" width="100%" height="130"></td>
               </tr>
             </tbody></table></td>
         </tr>
@@ -59,13 +51,13 @@ body,td,th {
           <td><table border="1" cellpadding="0" cellspacing="0" width="100%">
               <tbody><tr> 
                
-                <td background="images_files/med2.jpg">
+                <td background="images_files/Capture1.JPG">
                <jsp:include page="generaloptions.jsp"/>
 				</td>
               </tr>
             </tbody></table></td>
         </tr>
-        <tr background="images_files/med2.jpg"> 
+        <tr background="images_files/Medical-trends-of-20151.jpg"> 
           <td><table border="0" cellpadding="0" cellspacing="0" width="100%">
               <tbody> 
                 <td valign="top" width="192"><table border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -82,7 +74,7 @@ body,td,th {
 					  if(request.getParameter("ls")!=null)
 					  {
 					%>
-                    <span class="style2"><%=request.getParameter("ls")%>					</span>
+                    <span class="style2"><font color="Red"><%=request.getParameter("ls")%>					</span>
                     <%
 					  }
 					%>     
@@ -119,7 +111,7 @@ body,td,th {
                 <td valign="top" width="194">
                
                     
-                      <marquee direction="up" align="left" width="100%" height="640">
+                      <marquee direction="up" align="left" width="100%" height="590">
                               <img src="images_files/medicin1.jpg" width="100%" height="160"><img src="images_files/medicine3.jpg" width="100%" height="160"><img src="images_files/medicine5.jpg" width="100%" height="160"><img src="images_files/medicine4.jpg" width="100%" height="160"><img src="images_files/medicine7.jpg" width="100%" height="160"><img src="images_files/medical9.jpg" width="100%" height="160"><img src="images_files/medical8.png" width="100%" height="160"></td> 
                               </marquee>
                          

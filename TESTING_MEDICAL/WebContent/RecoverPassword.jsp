@@ -80,7 +80,7 @@ body,td,th {
 					  if(request.getParameter("status")!=null)
 					  {
 					%>
-                    <span class="style2"><%=request.getParameter("status")%>					</span>
+                    <span class="style2"><font color="Red"><%=request.getParameter("status")%>					</span>
                     <%
 					  }
 					%>     

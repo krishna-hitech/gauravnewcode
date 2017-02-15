@@ -22,7 +22,7 @@
       <forward name="Employeehome" path="/EmployeeHome.jsp"/>
       <forward name="customer" path="/CustomerHome.jsp"/>
       <forward name="dealer" path="/DealerHome.jsp"/>
-      <forward name="norecords" path="/LoginForm.jsp?ls=Invalid username and password"/>
+      <forward name="norecords" path="/LoginForm.jsp?ls=Invalid username or password"/>
       
       </action>
 <action path="/adminhome" type="org.apache.struts.actions.ForwardAction" parameter="/AdminHome.jsp"/>
