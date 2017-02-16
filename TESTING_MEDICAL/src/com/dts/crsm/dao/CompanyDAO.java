@@ -9,7 +9,6 @@ import java.sql.Statement;
 import com.dts.core.dao.AbstractDataAccessObject;
 import com.dts.core.util.CoreHash;
 import com.dts.core.util.LoggerManager;
-import com.dts.crsm.model.Brand;
 import com.dts.crsm.model.Company;
 
 public class CompanyDAO extends AbstractDataAccessObject{
