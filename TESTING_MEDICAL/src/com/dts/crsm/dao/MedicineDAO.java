@@ -144,7 +144,7 @@ public class MedicineDAO extends AbstractDataAccessObject{
 		{
 			con = getConnection();
 			st = con.createStatement();
-			ResultSet rs = st.executeQuery("select i.MEDICINEID,i.CATEGORYID,i.MEDICINENAME,i.MEDICINEDESC,c.CATEGORYNAME from MEDICINE i,CATEGORY c where c.CATEGORYID=i.MEDICINEID order by i.MEDICINEID");
+			ResultSet rs = st.executeQuery("select i.MEDICINEID,i.CATEGORYID,i.MEDICINENAME,i.MEDICINEDESC,c.CATEGORYNAME from MEDICINE i,CATEGORY c where c.CATEGORYID=i.CATEGORYID order by i.CATEGORYID");
 			while(rs.next())
 			{
 				medicineid = rs.getInt(1);

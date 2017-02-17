@@ -22,7 +22,7 @@ function mmLoadMenus() {
 window.mm_menu_1224101649_0 = new Menu("root",134,25,"Georgia, Times New Roman, Times, serif",12,"#993333","#333366","#B6B6B6","#E7D398","left","middle",3,0,500,-5,7,true,false,true,0,true,false);
    //mm_menu_1224101649_0.addMenuItem("View by Company","location='ViewStockbyCompany.jsp?header=list'");
   mm_menu_1224101649_0.addMenuItem("View by Category","location='viewStockbyCategory.do'"); 
-   mm_menu_1224101649_0.addMenuItem("View by Medicine","location='ViewStockbyMedicine.jsp?header=list'"); 
+   //mm_menu_1224101649_0.addMenuItem("View by Medicine","location='ViewStockbyMedicine.jsp?header=list'"); 
    mm_menu_1224101649_0.fontWeight="bold";
    mm_menu_1224101649_0.hideOnMouseOut=true;
    mm_menu_1224101649_0.bgColor='#DCF8C0';

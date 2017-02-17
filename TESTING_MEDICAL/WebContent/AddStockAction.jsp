@@ -29,7 +29,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       String target = "ViewStockbyCompany.jsp?header=list";
       try
       {
-         // int companyid = Integer.parseInt(request.getParameter("companyid"));
+          int companyid = Integer.parseInt(request.getParameter("companyid"));
           int categoryid = Integer.parseInt(request.getParameter("categoryid"));
           int medicineid = Integer.parseInt(request.getParameter("medicineid"));
           int quantity = Integer.parseInt(request.getParameter("quantity"));
@@ -37,7 +37,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           
           Stock stock = new Stock();
           
-         // inventory.setBrandID(brandid);
+         //stock.setBrandID(brandid);
+          stock.setCompanyID(companyid);
           stock.setCategoryID(categoryid);
           stock.setMedicineID(medicineid);
           stock.setQuantity(quantity);

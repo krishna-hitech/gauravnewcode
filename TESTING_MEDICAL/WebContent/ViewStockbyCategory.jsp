@@ -134,7 +134,7 @@ function validate()
          String header = request.getParameter("header");
 	     String role = (String) session.getAttribute("role");
 	      CoreList inCoreList = new CoreList();
-	     // CoreHash bCoreHash = new CoreHash();
+	      CoreHash bCoreHash = new CoreHash();
 	      CoreHash cCoreHash = new CoreHash();
 	      CoreHash iCoreHash = new CoreHash();
 	      
@@ -149,7 +149,7 @@ function validate()
              inCoreList = stockdao.StockByCategory(Integer.parseInt(request.getParameter("categoryid")));
              iCoreHash = medicinedao.listMedicineNames(); 
              cCoreHash = categorydao.listCategoryNames(); 
-           //  bCoreHash = branddao.listBrandNames();
+             bCoreHash = companydao.listCompanyNames();
              
              Stock stock = new Stock();
              
@@ -164,9 +164,9 @@ function validate()
         
         </div></td>
         <%
-        	}
+         }
         %>
-<%--        <td width="103"><div align="center" class="style8">Brand</div></td>--%>
+        <td width="103"><div align="center" class="style8">Company</div></td>
         <td width="110"><div align="center" class="style8">Category</div></td>
         <td width="87"><div align="center" class="style8">Medicine</div></td>
         <td width="64"><div align="center" class="style8">Quantity</div></td>
@@ -192,7 +192,7 @@ function validate()
           				categoryid = stock.getCategoryID();
           				quantity = stock.getQuantity();
 						price = stock.getPrice();
-						//brandid = inventory.getBrandID();
+						companyid = stock.getCompanyID();
           		         		
           %>
       <tr bgcolor="#CEC9FA">
@@ -205,7 +205,7 @@ function validate()
  	System.out.println("this is asfasfasdf"+i);
  	}
  %> 
-        
+        <td bgcolor="#C3D7BA"><div align="center" class="style7"><%=bCoreHash.get(new Integer(companyid))%></div></td>
         <td bgcolor="#C3D7BA"><div align="center" class="style7"><%=cCoreHash.get(new Integer(request.getParameter("categoryid")))%></div></td> 
         <td bgcolor="#C3D7BA"><div align="center" class="style7"><%=iCoreHash.get(new Integer(medicineid))%></div></td>
         <td bgcolor="#C3D7BA"><div align="center"><span class="style7"><%=quantity%></span></div></td>

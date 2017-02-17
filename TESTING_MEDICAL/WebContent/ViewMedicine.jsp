@@ -67,7 +67,7 @@ function validate()
                          
                   </table></td>
                 <td valign="top"  width="750" > 
-                 <H1 align="center"><font color="Blue">Medical Store System </font></H1>  <p align="center">&nbsp;</p>
+                 <H1 align="center"><font color="Blue">Medical Store System </font></H1>  <p align="center"></p>
                
 
                   <p align="center"> <fieldset>
@@ -75,7 +75,7 @@ function validate()
   <br />
                     <form name="f" method="post" action="deleteMedicineAction.do">
  
-    <table width="637" border="0" align="center" bordercolor="#8692E3">
+    <table width="800" border="0" align="center" bordercolor="#8692E3">
     
       <tr bgcolor="#509C16">
       <%

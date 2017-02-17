@@ -53,7 +53,7 @@ body,td,th {
           <td background="images_files/sitebackground.jpg"><table border="0" cellpadding="0" cellspacing="0" width="100%">
               <tbody> 
                 <td valign="top" width="192"><table border="0" cellpadding="0" cellspacing="0" width="100%">
-                    <marquee direction="up" align="left" width="100%" height="605">
+                    <marquee direction="down" align="left" width="100%" height="605">
                               <img src="images_files/mq1.jpg" width="100%" height="160"><img src="images_files/mq2.jpg" width="100%" height="160"><img src="images_files/mq3.jpg" width="100%" height="160"><img src="images_files/mq4.jpg" width="100%" height="160"><img src="images_files/mq5.jpg" width="100%" height="160"><img src="images_files/mq6.jpg" width="100%" height="160"><img src="images_files/mq7.jpg" width="100%" height="160"><img src="images_files/mq8.jpg" width="100%" height="160"><img src="images_files/mq9.jpg" width="100%" height="160"><img src="images_files/mq10.jpg" width="100%" height="160"><img src="images_files/mq11.jpg" width="100%" height="160"><img src="images_files/mq12.jpg" width="100%" height="160"><img src="images_files/mq13.jpg" width="100%" height="160"><img src="images_files/mq14.jpg" width="100%" height="160"><img src="images_files/mq15.png" width="100%" height="160"><img src="images_files/mq16.jpg" width="100%" height="160"><img src="images_files/mq17.jpg" width="100%" height="160"><img src="images_files/mq18.jpg" width="100%" height="160"></td> 
                               </marquee>
                          
@@ -65,35 +65,24 @@ body,td,th {
                   <p align="center"><fieldset>
 					<legend><span class="style3">Add New Stock</span></legend>
   <br />
-                    <form  method="post" action="addNewStock.do" name="stock">
+                    <form  method="post" action="AddNewStock.do" name="stock">
  
     <table width="259" border="0" align="center" bordercolor="#8692E3">
-      <tr>
-        <td><span class="style9"></span></td>
-        <td><label>
-          <%
-		  		try
-		  		{
-		  		   CoreHash bCoreHash = new CompanyDAO().listCompanyNames();
-		  		   Enumeration enu = bCoreHash.keys();
-		  		   String select = "";
-		  		   int companyid1 = 0;
-		  		   int companyid = 0;
-		  %>		  
-        </label></td>
-      </tr>
+     
       <tr>
         <td width="107"><span class="style9">Category</span></td>
         <td width="142"><label class="textfield">
           <select name="categoryID" id="textfield"  onchange="javascript:if(document.stock.categoryID.value==''){alert('select Any Category');}else{location.href='AddNewStock.jsp?categoryid='+document.stock.categoryID.value;}">
              <option>--select--</option>
             <%
-            
+                try
+           		 {
                 CoreHash aCoreHash = new CoreHash();
                 Category aCategory = new Category();
                 aCoreHash = new CategoryDAO().listCategories(); 
-                enu = aCoreHash.elements();
-                int categoryid = 0;
+                 Enumeration enu = aCoreHash.elements();
+                 String select = "";
+                int categoryid;
                 while(enu.hasMoreElements())
                 {
                    aCategory = (Category)enu.nextElement();
@@ -116,6 +105,26 @@ body,td,th {
           </select>
         </label></td>
       </tr>    
+       <tr>
+        <td width="107"><span class="style9">Company</span></td>
+        <td width="142"><label class="textfield">
+         <select name="CompanyID" id="select2">
+             <option>--select--</option>
+          <%
+          CoreHash bCoreHash = new CompanyDAO().listCompanyNames();
+          enu = bCoreHash.keys();
+ 		   int companyid1 = 0;
+ 		   int companyid = 0;
+		  		 while(enu.hasMoreElements())
+	                {
+	                  companyid = Integer.parseInt(enu.nextElement().toString());
+	                 %>
+	                   <option value="<%=companyid%>"><%=bCoreHash.get(new Integer(companyid))%></option>
+	                   
+	                <% }
+		  %>		  
+        </label></td>
+      </tr>
       <tr>
         <td class="style9">Medicine</td>
         <td><label>
@@ -145,6 +154,7 @@ body,td,th {
           </select>
         </label></td>
       </tr>
+   
       <tr>
         <td width="107"><span class="style9">Quantity</span></td>
         <td width="142"><label class="textfield">
@@ -152,7 +162,7 @@ body,td,th {
         </label></td>
       </tr>
       <tr>
-        <td><span class="style9">Price/item</span></td>
+        <td><span class="style9">Price/medicine</span></td>
         <td><label>
           <input name="price" type="text" id="textfield2" value="0" />
         </label></td>

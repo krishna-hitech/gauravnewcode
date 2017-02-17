@@ -43,7 +43,7 @@ public class AddCategoryAction extends Action {
     	boolean flag = aCategoryDAO.addCategory(category);
 if(flag)
 {
-	return mapping.findForward("viewCategorys");
+	return mapping.findForward("ViewCategories");
 }
 	}catch (Exception e) {
 		// TODO: handle exception

@@ -32,12 +32,12 @@ public class StockDAO extends AbstractDataAccessObject{
     	try
     	{
     		con=getConnection();
-    		PreparedStatement pst = con.prepareStatement("insert into STOCK values(?,?,?,?)");
-    		
+    		PreparedStatement pst = con.prepareStatement("insert into STOCK values(?,?,?,?,?)");
     		pst.setInt(1, stock.getCategoryID());
     		pst.setInt(2, stock.getMedicineID());
     		pst.setInt(3, stock.getQuantity());
     		pst.setDouble(4, stock.getPrice());
+    		pst.setInt(5, stock.getCompanyID());
     		    		
     		if(pst.executeUpdate()>0)
     		{
@@ -124,7 +124,7 @@ public class StockDAO extends AbstractDataAccessObject{
     		
     			
     		pst.setInt(1, stock.getCategoryID());	
-    		pst.setInt(2, stock.getCompanyID());
+    		pst.setInt(2, stock.getMedicineID());
     		
     		if(pst.executeUpdate()>0)
     		{
@@ -232,7 +232,7 @@ public class StockDAO extends AbstractDataAccessObject{
 			ResultSet rs = st.executeQuery("select * from stock where Companyid="+companyid);
 			while(rs.next())
 			{				
-				aCoreHash.put(new Integer(rs.getInt(1)), rs.getString(2));
+				aCoreHash.put(new Integer(rs.getInt(5)), rs.getString(2));
 			}
 		} 
 		catch (SQLException e)
@@ -354,6 +354,7 @@ public class StockDAO extends AbstractDataAccessObject{
 			{
 				stock = new Stock();
 				//stock.setBrandID(rs.getInt(1));
+				stock.setCompanyID(rs.getInt(5));
 				stock.setCategoryID(rs.getInt(1));
 				stock.setMedicineID(rs.getInt(2));
 				stock.setQuantity(rs.getInt(3));
@@ -397,15 +398,17 @@ public class StockDAO extends AbstractDataAccessObject{
 			con = getConnection();
 			st = con.createStatement();
 			int count = 0;
-			ResultSet rs = st.executeQuery("select * from STOCK where medicineid="+medicineid+" order by companyid");
+			ResultSet rs = st.executeQuery("select * from STOCK where medicineid="+medicineid+" order by categoryid");
 			while(rs.next())
 			{
 				stock = new Stock();
-				stock.setCompanyID(rs.getInt(1));
-				stock.setCategoryID(rs.getInt(2));
-				stock.setMedicineID(rs.getInt(3));
-				stock.setQuantity(rs.getInt(4));
-				stock.setPrice(rs.getDouble(5));
+				//stock.setCompanyID(rs.getInt(1));
+				stock.setCompanyID(rs.getInt(5));
+				stock.setCategoryID(rs.getInt(1));
+				stock.setMedicineID(rs.getInt(2));
+				stock.setQuantity(rs.getInt(3));
+				stock.setPrice(rs.getDouble(4));
+				
 				
 				count++;
 				aCoreList.add(stock);

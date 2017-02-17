@@ -169,7 +169,7 @@
         <td bgcolor="#C3D7BA"><input name="ch<%=i%>" type="checkbox" id="checkbox2" value="<%=request.getParameter("medicineid")%>,<%=categoryid%>,<%=medicineid%>"/></td> <%
  	}
  %> 
-        <td bgcolor="#C3D7BA"><div align="center" class="style7"><%=bCoreHash.get(new Integer(request.getParameter("brandid")))%></div></td> 
+        <td bgcolor="#C3D7BA"><div align="center" class="style7"><%=bCoreHash.get(new Integer(request.getParameter("companyid")))%></div></td> 
         <td bgcolor="#C3D7BA"><div align="center" class="style7"><%=cCoreHash.get(new Integer(categoryid))%></div></td> 
         <td bgcolor="#C3D7BA"><div align="center" class="style7"><%=iCoreHash.get(new Integer(medicineid))%></div></td>
         <td bgcolor="#C3D7BA"><div align="center"><span class="style7"><%=quantity%></span></div></td>

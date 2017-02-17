@@ -83,7 +83,7 @@ function validate()
   
    %>
                     <form name="f" method="post" action="editMedicineAction.do">
-               <input type="hidden" name="itemID" value="<%=medicineid%>"/>
+               <input type="hidden" name="medicineID" value="<%=medicineid%>"/>
     <table width="244" border="0" align="center" bordercolor="#8692E3">
        <tr>
         <td width="107"><span class="style9">Category</span></td>

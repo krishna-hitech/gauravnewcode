@@ -9,7 +9,7 @@
 
  <link href="images_files/style.css" rel="stylesheet" type="text/css">
 <script language="javascript" src="images_files/slideshow1.js"></script>--%>
- <<script language="JavaScript" src="scripts/gen_validatorv31.js" type="text/javascript"></script>
+ <script language="JavaScript" src="scripts/gen_validatorv31.js" type="text/javascript"></script>
 <script language="JavaScript" type="text/javascript" src="scripts/ts_picker.js"></script>
 <script language="JavaScript1.1" src="scripts/pass.js">
 
@@ -95,7 +95,7 @@ body,td,th {
                             <option value="4">Where did you meet your spouse?</option>
                             <option value="5">What is your favorite sports team?</option>
                             <option value="6">What is your father's middle name?</option>
-                            <option value="7">What was your high school mascot?</option>
+                            <option value="7">What was your high school marks?</option>
                             <option value="8">What make was your first car or bike?</option>
                             <option value="9">What is your pet's name?</option>
                         </select></td>

@@ -73,7 +73,7 @@ function validate()
                 <td valign="top"  width="750" > 
                  <H1 align="center"><font color="Blue">Medical Store System </font></H1>  <p align="center">&nbsp;</p>
                
-               <p>&nbsp;</p><font color="white"><b>  Export to :</b> <a href="ExportXLS" target="_blank"><font color="white"><b>XLS</b></a>
+               <p>&nbsp;</p><font color="white"><b>  Export to :</b> <a href="ExportXLS" target="_blank"><font color="white"><b>Excel Sheet</b></a>
                
 
 
@@ -114,7 +114,7 @@ function validate()
 					   report+="  <tr><td bgcolor=#DDEAD7><div align=center><span class=style14>"+(aSales.getSalesID())+"</a></span></div></td>                    <td bgcolor=#DDEAD7><div align=center><strong>"+(aSales.getLoginname())+"</strong></div></td>                    <td bgcolor=#DDEAD7><div align=center><span class=style14>"+DateWrapper.parseDate(aSales.getSalesDate1())+"</span></div></td>                    <td bgcolor=#DDEAD7><div align=center><span class=style14>"+(aSales.getTotalamount())+"</span></div></td>                    <td bgcolor=#DDEAD7><div align=center class=style14>"+(aSales.getStatus())+"</div></td></tr>";
               %>     
                   <tr>
-                    <td bgcolor="#DDEAD7"><div align="center"><span class="style14"><a href="ViewSalesDetails.jsp?orderid=<%=(aSales.getSalesID())%>"><%=(aSales.getSalesID())%></a></span></div></td>
+                    <td bgcolor="#DDEAD7"><div align="center"><span class="style14"><a href="ViewSalesDetails.jsp?salesid=<%=(aSales.getSalesID())%>"><%=(aSales.getSalesID())%></a></span></div></td>
                     <td bgcolor="#DDEAD7"><div align="center"><strong><%=(aSales.getLoginname())%></strong></div></td>
                     <td bgcolor="#DDEAD7"><div align="center"><span class="style14"><%=DateWrapper.parseDate(aSales.getSalesDate1())%></span></div></td>
                     <td bgcolor="#DDEAD7"><div align="center"><span class="style14"><%=(aSales.getTotalamount())%></span></div></td>

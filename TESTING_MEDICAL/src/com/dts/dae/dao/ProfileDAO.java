@@ -91,7 +91,7 @@ public class ProfileDAO extends AbstractDataAccessObject{
            }
            String newdate=DateWrapper.parseDate(new Date());
             
-           //st.executeUpdate("insert into LOGIN_DETAILS values('"+loginid+"','"+password+"','"+firstname+"','"+lastname+"','"+logintype+"',"+status+",'"+newdate+"',"+secretquest+",'"+secretans+"',"+firstlogin+",'"+newdate+"')");
+           //st.executeUpdate("insert into LOGIN_DETAILS values('"+loginid+"','"+password+"','"+firstname+"','"+lastname+"','"+logintype+"',"+status+",'"+newdate+"',"+secretquest+",'"+secretans+"')");
            pst=con.prepareStatement("insert into LOGINDETAILS values(?,?,?,?,?,?,?,?,?)");
                         
            pst.setString(1,loginid);
@@ -108,7 +108,7 @@ public class ProfileDAO extends AbstractDataAccessObject{
            i=pst.executeUpdate();
            if(i==1)
            {
-                pst=con.prepareStatement("insert into LOGINPROFILE values(?,?,?,?,?,?,?,?)");
+                pst=con.prepareStatement("insert into LOGINPROFILE values(?,?,?,?,?,?,?,?,?,?)");
                 pst.setString(1,loginid);
                 pst.setString(2,bdate);
                 pst.setString(3, hno);
@@ -117,8 +117,9 @@ public class ProfileDAO extends AbstractDataAccessObject{
                 pst.setString(6,state);
                 pst.setString(7,country);
                 pst.setString(8, pincode);
-                //pst.setString(9, phoneno);
-                //pst.setString(10, email);                
+                pst.setString(9, email);
+                pst.setString(10, phoneno);
+                //;                
                 //pst.setString(11,locale);
                 //pst.setString(12,newdate);
                 i=pst.executeUpdate();
@@ -172,7 +173,7 @@ public class ProfileDAO extends AbstractDataAccessObject{
         {
         	con=getConnection();
            Statement st = con.createStatement();
-           ResultSet rs = st.executeQuery("select ld.firstname,ld.lastname,lp.birthdate,lp.city,lp.state,lp.country from logindetails ld,loginprofile lp where ld.loginname=lp.loginid and ld.loginname='"+loginname+"'");
+           ResultSet rs = st.executeQuery("select ld.firstname,ld.lastname,lp.dob,lp.city,lp.state,lp.country from logindetails ld,loginprofile lp where ld.loginname=lp.loginid and ld.loginname='"+loginname+"'");
            if(rs.next())
            {
         	   rb=new Profile();
@@ -215,7 +216,7 @@ public class ProfileDAO extends AbstractDataAccessObject{
         {
         	con=getConnection();
             con.setAutoCommit(false);
-            PreparedStatement pst=con.prepareStatement("UPDATE loginprofile SET birthdate=?,hno=?,street=?,city=?,state=?,country=?,pincode=?,contactno=?,email=?,profilemodifieddate=? WHERE loginid=?");
+            PreparedStatement pst=con.prepareStatement("UPDATE loginprofile SET dob=?,hno=?,street=?,city=?,state=?,country=?,pincode=?,contactno=?,email=?,profilemodifieddate=? WHERE loginid=?");
             PreparedStatement pst1=con.prepareStatement("UPDATE logindetails SET firstname=?,lastname=? WHERE loginname=?");
             
             pst.setString(1,bdate);

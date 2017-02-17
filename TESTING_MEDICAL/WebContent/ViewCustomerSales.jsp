@@ -71,9 +71,9 @@ function validate()
                          
                   </table></td>
                 <td valign="top"  width="750" > 
-                 <H1 align="center"><font color="Blue">Medical Store System </font></H1>  <p align="center">&nbsp;</p>
+                 <H1 align="center"><font color="Blue">Medical Store System </font></H1>  <p align="center"></p>
                
-<p>&nbsp;</p><font color="white"><b>  Export to :</b> <a href="ExportXLS" target="_blank"><font color="white" size="2"><b>XLS</font></a></font>
+<font color="white"><b>  Print :</b> <a href="ExportXLS" target="_blank"><font color="white"><b>Recipt</font></a></font>
                
 
 

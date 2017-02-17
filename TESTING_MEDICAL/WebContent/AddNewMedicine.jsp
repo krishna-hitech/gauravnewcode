@@ -77,7 +77,7 @@ function validate()
                   <p align="center">           <fieldset>
 					<legend><span class="style3">New Medicine</span></legend>
   <br />
-                    <form name="f" method="post" action="addNewMedicine.do">
+                    <form name="f" method="post" action="AddNewMedicine.do">
  
     <table width="259" border="0" align="center" bordercolor="#8692E3">
       <tr>
@@ -131,9 +131,9 @@ function validate()
   var frmvalidator  = new Validator("f");
   
  
-  frmvalidator.addValidation("medicineName","req","Please enter your itemName");
-  frmvalidator.addValidation("medicineName","maxlen=20",	"Max length for itemName is 20");
-  frmvalidator.addValidation("medicineName","alpha"," itemName Alphabetic chars only");
+  frmvalidator.addValidation("medicineName","req","Please enter your medicineName");
+  frmvalidator.addValidation("medicineName","maxlen=20",	"Max length for medicineName is 20");
+  frmvalidator.addValidation("medicineName","alpha"," medicineName Alphabetic chars only");
   
   frmvalidator.addValidation("medicineDesc","req","Please enter your Last Name");
   

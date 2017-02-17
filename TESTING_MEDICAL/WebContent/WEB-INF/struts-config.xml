@@ -41,7 +41,7 @@
       scope="request"
       type="com.dts.project.action.AddCategoryAction"
       validate="false">
-<forward name="viewCategorys" path="/Success.jsp?status=Category Added Successfully"/>
+<forward name="ViewCategories" path="/Success.jsp?status=Category Added Successfully"/>
       <forward name="norecords" path="/Success.jsp?status=Category Addition to be Failed"/>
 
       </action>
@@ -71,26 +71,26 @@
     <action
       attribute="medicine"
       name="medicine"
-      path="/addNewMedicine"
+      path="/AddNewMedicine"
       scope="request"
       type="com.dts.project.action.AddNewMedicine">
         <forward name="registerSuccess" path="/Success.jsp?status=Medicine Registered SuccessFully"/>
-<forward name="registerFail" path="/Success.jsp?status=Medicine Registeration Failed"/>
+<forward name="registerFail" path="/Success.jsp?status=Medicine Registration Failed"/>
    
       </action>
     <action path="/deleteMedicineAction" type="com.dts.project.action.DeleteMedicine" >
-    <forward name="deleteSuccess" path="/Success.jsp?status=medicine Deleted SuccessFully"/>
-   <forward name="deleteFail" path="/Success.jsp?status=medicine Deleted Failed"/>
+    <forward name="deleteSuccess" path="/Success.jsp?status=Medicine Deleted SuccessFully"/>
+   <forward name="deleteFail" path="/Success.jsp?status=Medicine Deletion Failed"/>
    
     </action>
     <action path="/editMedicineAction" type="com.dts.project.action.EditMedicineAction" name="medicine">
     <forward name="updateSuccess" path="/Success.jsp?status=medicine Updated SuccessFully"/>
-   <forward name="updateFail" path="/Success.jsp?status=medicine Updated Failed"/>
+   <forward name="updateFail" path="/Success.jsp?status=medicine Updation Failed"/>
    
     </action>
 <action path="/viewStockbyCategory" type="org.apache.struts.actions.ForwardAction" parameter="/ViewStockbyCategory.jsp?header=list"/>
     <action
-      path="/addNewStock"
+      path="/AddNewStock"
       type="com.dts.project.action.AddNewStock"
       validate="false" name="Stock">
        <forward name="registerSuccess" path="/Success.jsp?status=Stock Added SuccessFully"/>

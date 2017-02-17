@@ -59,14 +59,14 @@ body,td,th {
                          
                   </table></td>
                 <td valign="top"  width="750" > 
-                 <H1 align="center"><font color="Blue">Medical Store System </font></H1>  <p align="center">&nbsp;</p>
+                 <H1 align="center"><font color="Blue">Medical Store System </font></H1>  <p align="center"></p>
                
        <p align="center"><fieldset>
 					<legend><span class="style3">View Categories</span></legend>
   <br />
       <form name="f" method="post" action="deleteCategoryAction.do">
  
-    <table width="400" border="0" align="center" bordercolor="#8692E3">
+    <table width="800" border="0" align="center" bordercolor="#8692E3">
     
       <tr bgcolor="#509C16">
       <%
