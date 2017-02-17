@@ -61,7 +61,7 @@ function validate()
         <tr > 
           <td background="images_files/sitebackground.jpg"><table border="0" cellpadding="0" cellspacing="0" width="100%">
               <tbody> 
-                <td valign="top" width="192"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <td valign="top" width="120"><table border="0" cellpadding="0" cellspacing="0" width="100%">
                     <marquee direction="up" align="left" width="100%" height="605">
                               <img src="images_files/mq1.jpg" width="100%" height="160"><img src="images_files/mq2.jpg" width="100%" height="160"><img src="images_files/mq3.jpg" width="100%" height="160"><img src="images_files/mq4.jpg" width="100%" height="160"><img src="images_files/mq5.jpg" width="100%" height="160"><img src="images_files/mq6.jpg" width="100%" height="160"><img src="images_files/mq7.jpg" width="100%" height="160"><img src="images_files/mq8.jpg" width="100%" height="160"><img src="images_files/mq9.jpg" width="100%" height="160"><img src="images_files/mq10.jpg" width="100%" height="160"><img src="images_files/mq11.jpg" width="100%" height="160"><img src="images_files/mq12.jpg" width="100%" height="160"><img src="images_files/mq13.jpg" width="100%" height="160"><img src="images_files/mq14.jpg" width="100%" height="160"><img src="images_files/mq15.png" width="100%" height="160"><img src="images_files/mq16.jpg" width="100%" height="160"><img src="images_files/mq17.jpg" width="100%" height="160"><img src="images_files/mq18.jpg" width="100%" height="160"></td> 
                               </marquee>
@@ -120,7 +120,7 @@ function validate()
 
 
 </body></html><p align="center">&nbsp;</p></td>
-                <td valign="top" width="194">
+                <td valign="top" width="120">
                
                     
                       <marquee direction="down" BEHAVIOR="ALTERNATE" align="left" width="100%" height="605">
