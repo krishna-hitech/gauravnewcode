@@ -70,7 +70,7 @@ function validate()
                          
                   </table></td>
                 <td valign="top"  width="750" > 
-                 <H1 align="center"><font color="Blue">Medical Store System </font></H1>  <p align="center">&nbsp;</p>
+                 <H1 align="center"><font color="Blue">Medical Store System </font></H1> 
                
 	  <fieldset>
 					<legend><span class="style3">New Company</span></legend>
@@ -82,13 +82,13 @@ function validate()
       <tr>
         <td width="89"><span class="style9">Company Name</span></td>
         <td width="145"><label class="textfield">
-          <input type="text" name="Companyname" id="textfield" />
+          <input type="text" name="CompanyName" id="textfield" />
         </label></td>
       </tr>
       <tr>
         <td><span class="style9">Company Address</span></td>
         <td><label>
-          <input type="text" name="CompanyAdd" id="textfield2" />
+          <input type="text" name="CompanyAddress" id="textfield2" />
         </label></td>
         </tr>
         <tr>

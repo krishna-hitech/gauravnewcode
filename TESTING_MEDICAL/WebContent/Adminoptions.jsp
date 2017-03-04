@@ -10,7 +10,7 @@ System.out.println("hello"+session.getAttribute("user"));
 function mmLoadMenus() {
   if (window.mm_menu_1224101012_0) return;
       window.mm_menu_1224101012_0 = new Menu("root",134,25,"Georgia, Times New Roman, Times, serif",12,"#993333","#333366","#B6B6B6","#E7D398","left","middle",3,0,500,-5,7,true,false,true,0,true,false);
-  //mm_menu_1224101012_0.addMenuItem("Company","location='ViewCompany.jsp?header=list'");
+  mm_menu_1224101012_0.addMenuItem("Company","location='ViewCompany.jsp?header=list'");
   mm_menu_1224101012_0.addMenuItem("Category","location='ViewCategories.do?header=list'");
   mm_menu_1224101012_0.addMenuItem("Medicine","location='viewMedicine.do?header=list'");
    mm_menu_1224101012_0.fontWeight="bold";

@@ -305,11 +305,11 @@ public class StockDAO extends AbstractDataAccessObject{
 			while(rs.next())
 			{
 				stock = new Stock();
-				stock.setCompanyID(rs.getInt(1));
-				stock.setCategoryID(rs.getInt(2));
-				stock.setMedicineID(rs.getInt(3));
-				stock.setQuantity(rs.getInt(4));
-				stock.setPrice(rs.getDouble(5));
+				stock.setCompanyID(rs.getInt(5));
+				stock.setCategoryID(rs.getInt(1));
+				stock.setMedicineID(rs.getInt(2));
+				stock.setQuantity(rs.getInt(3));
+				stock.setPrice(rs.getDouble(4));
 				
 				count++;
 				aCoreList.add(stock);

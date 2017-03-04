@@ -75,7 +75,7 @@ function validate()
   <br />
                     <form name="f" method="post" action="deleteMedicineAction.do">
  
-    <table width="800" border="0" align="center" bordercolor="#8692E3">
+    <table width="100%" border="0" align="center" bordercolor="#8692E3">
     
       <tr bgcolor="#509C16">
       <%
@@ -135,7 +135,7 @@ function validate()
         <a href="EditMedicine.jsp?id=<%=medicineid%>"><%=medicine.getMedicineName()%></a>
         <%} %>
         </div></td>
-        <td bgcolor="#C3D7BA"><div align="center"><span class="style7"><%=medicine.getMedicineDesc()%></span></div></td>
+        <td bgcolor="#C3D7BA"><div align="left"><span class="style7"><%=medicine.getMedicineDesc()%></span></div></td>
       </tr>
       <%
       	}

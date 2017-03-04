@@ -70,7 +70,7 @@ function validate()
                          
                   </table></td>
                 <td valign="top"  width="750" > 
-                 <H1 align="center"><font color="Blue">Medical Store System </font></H1>  <p align="center">&nbsp;</p>
+                 <H1 align="center"><font color="Blue">Medical Store System </font></H1>
                
 
 	  <fieldset>
@@ -83,7 +83,7 @@ function validate()
          Company aCompany = new CompanyDAO().editCompany(companyid); 
   
    %>
-                    <form name="f" method="post" action="UpdateBrandAction.jsp">
+                    <form name="f" method="post" action="UpdateCompanyAction.jsp">
                <input type="hidden" name="companyid" value="<%=companyid%>"/>
     <table width="244" border="0" align="center" bordercolor="#8692E3">
           

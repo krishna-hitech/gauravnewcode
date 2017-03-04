@@ -28,7 +28,7 @@ public class CompanyDAO extends AbstractDataAccessObject{
     	{
     		int id = getSequenceID("COMPANY","companyid");
     		con=getConnection();
-    		PreparedStatement pst = con.prepareStatement("insert into COMPANY values(?,?,?)");
+    		PreparedStatement pst = con.prepareStatement("insert into COMPANY values(?,?,?,?,?)");
     		pst.setInt(1, id);
     		pst.setString(2, company.getCompanyName());
     		pst.setString(3, company.getCompanyAdd());

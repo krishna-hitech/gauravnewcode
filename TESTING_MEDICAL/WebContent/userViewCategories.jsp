@@ -71,14 +71,14 @@ function validate()
                          
                   </table></td>
                 <td valign="top"  width="750" > 
-                 <H1 align="center"><font color="Blue">Medical Store System </font></H1>  <p align="center">&nbsp;</p>
+                 <H1 align="center"><font color="Blue">Medical Store System </font></H1>
                
 
                   <p align="center"> <fieldset>
 					<legend><span class="style3">View Categories</span></legend>
   <br />
                    
-    <table width="637" border="0" align="center" bordercolor="#8692E3">
+    <table width="100%" border="0" align="center" bordercolor="#8692E3">
     
       <tr bgcolor="#509C16">
       <%

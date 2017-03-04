@@ -66,7 +66,7 @@ body,td,th {
   <br />
       <form name="f" method="post" action="deleteCategoryAction.do">
  
-    <table width="800" border="0" align="center" bordercolor="#8692E3">
+    <table width="100%" border="0" align="center" bordercolor="#8692E3">
     
       <tr bgcolor="#509C16">
       <%
@@ -115,7 +115,7 @@ body,td,th {
          %>
         <a href="EditCategory.jsp?id=<%=categoryid%>"><%=category.getCategoryName()%></a>
         <%} %></div></td>
-        <td bgcolor="#C3D7BA"><div align="center"><span class="style7"><%=category.getCategoryDesc()%></span></div></td>
+        <td bgcolor="#C3D7BA"><div align="left"><span class="style7"><%=category.getCategoryDesc()%></span></div></td>
       </tr>
       <%}
       }

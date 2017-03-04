@@ -69,7 +69,7 @@ function validate()
                          
                   </table></td>
                 <td valign="top"  width="750" > 
-                 <H1 align="center"><font color="Blue">Medical Store System </font></H1>  <p align="center">&nbsp;</p>
+                 <H1 align="center"><font color="Blue">Medical Store System </font></H1>
                
 
 	  <fieldset>
@@ -77,7 +77,7 @@ function validate()
   <br />
                     <form name="f" method="post" action="DeleteCompanyAction.jsp">
  
-    <table width="637" border="0" align="center" bordercolor="#8692E3">
+    <table width="100%" border="0" align="center" bordercolor="#8692E3">
     
       <tr bgcolor="#509C16">
       <%
@@ -101,7 +101,9 @@ function validate()
         <%} %>
         
         <td width="233"><div align="center" class="style8">Name</div></td>
-        <td width="372"><div align="center" class="style8">Description</div></td>
+        <td width="272"><div align="center" class="style8">Address</div></td>
+        <td width="472"><div align="center" class="style8">Contact</div></td>
+        <td width="272"><div align="center" class="style8">Email</div></td>
       </tr>
           <%
              Enumeration enu = aCoreHash.elements();
@@ -130,6 +132,8 @@ function validate()
         <%} %>
         </div></td>
         <td bgcolor="#C3D7BA"><div align="center"><span class="style7"><%=company.getCompanyAdd()%></span></div></td>
+        <td bgcolor="#C3D7BA"><div align="center"><span class="style7"><%=company.getCompanyContact()%></span></div></td>
+        <td bgcolor="#C3D7BA"><div align="center"><span class="style7"><%=company.getCompanyEmail()%></span></div></td>
       </tr>
       <%} 
       }

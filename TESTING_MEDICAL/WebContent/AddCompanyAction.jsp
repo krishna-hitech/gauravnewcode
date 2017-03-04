@@ -28,15 +28,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
      <%
         try
         { 
-        	String Companyname = request.getParameter("companyname");
-        	String Companyaddress = request.getParameter("address");
-        	String CompanyContact = request.getParameter("Contact");
-        	String CompanyEmail = request.getParameter("email");
+        	String CompanyName = request.getParameter("companyName");
+        	String CompanyAddress = request.getParameter("CompanyAddress");
+        	String CompanyContact = request.getParameter("CompanyContact");
+        	String CompanyEmail = request.getParameter("CompanyEmail");
+        	
         	Company aCompany = new Company();
-        	aCompany.setCompanyName(Companyname);
-        	aCompany.setCompanyAdd(Companyaddress);
+        	aCompany.setCompanyName(CompanyName);
+        	aCompany.setCompanyAdd(CompanyAddress);
         	aCompany.setCompanyContact(CompanyContact);
         	aCompany.setCompanyEmail(CompanyEmail);
+        	
         	CompanyDAO aCompanyDAO = new CompanyDAO();
         	boolean flag = aCompanyDAO.addCompany(aCompany);
         }
@@ -44,7 +46,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         {
            LoggerManager.writeLogWarning(e);
         }
-        	RequestDispatcher rd = request.getRequestDispatcher("ViewBrands.jsp?header=list");
+        	RequestDispatcher rd = request.getRequestDispatcher("ViewCompany.jsp?header=list");
         	rd.forward(request,response);
         
       %>

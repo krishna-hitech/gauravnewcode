@@ -4,18 +4,13 @@
 <%@  page import="com.dts.crsm.model.Company, com.dts.crsm.dao.CompanyDAO,com.dts.crsm.model.Stock, com.dts.crsm.dao.StockDAO"%>
 <html><head>
 <%--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">--%>
-
-
-<title> Medical Store Sysytem </title>
+<title> Medical Store System </title>
 <%--<meta name="Description" content="Event Management Institute India, Event Management Courses In India, | national academy of event management and development ">
 <meta name="KeyWords" content="Event Management Institute, Event Managemnet Course, Event Management Courses in India - Asia, Event Management Program, Jobs in Events, Career in Events, Event Management College, certified course in events, International event management course.">
-
  <link href="images_files/style.css" rel="stylesheet" type="text/css">
 <script language="javascript" src="images_files/slideshow1.js"></script>--%>
  <script language="javascript" src="images_files/slideshow2.js"></script>
 <script language="javascript" src="scripts/moveclock.js"></script>
-
-
 <style type="text/css">
 <!--
 body {
@@ -71,20 +66,14 @@ function validate()
                          
                   </table></td>
                 <td valign="top"  width="750" > 
-                 <H1 align="center"><font color="Blue">Medical Store System </font></H1>  <p align="center">&nbsp;</p>
+                 <H1 align="center"><font color="Blue">Medical Store System </font></H1>  
                
-			<h3 align="right">
-	    <a align="right"><script language="JavaScript" type="text/javascript">
-      </script></a></h3>
-<div class="content">
-  <table width="654" border="0">
-<tr>
-                    <td width="648">
+			
 	  <fieldset>
 					<legend><span class="style3">View Stock by Company</span></legend>
   <br /> 
   <form id="form1" method="post" action="ViewStockbyCompany.jsp?header=<%=request.getParameter("header")%>" name="stock">
-    <table width="200" border="0" align="center">
+    <table width="700" border="0" align="center">
       <tr>
         <td width="94"><span class="style3"><strong>Company Name</strong></span></td>
         <td width="90"><label>
@@ -288,8 +277,6 @@ function validate()
 </td>
               </tr>
             </tbody></table></td>
-        </tr>
-        <tr> 
 		<td>
 		<table bgcolor="#D9E7F3" width="100%">
 		<tbody><tr bgcolor="##D9E7F3">
@@ -301,11 +288,6 @@ function validate()
 </td>
   </tr>
 </tbody></table>
-				
-			
-		      </td>
-          </tr>
-                </table>
 
 </body>
 </html>
